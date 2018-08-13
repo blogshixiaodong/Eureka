@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: eurka
+  profiles:
+      active: server1

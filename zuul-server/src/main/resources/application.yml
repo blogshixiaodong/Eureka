@@ -1,0 +1,24 @@
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8760/eureka/
+
+server:
+  port: 8767
+spring:
+  application:
+    name: service-zuul
+
+zuul:
+  routes:
+    myRoutes1:
+      path: /myRoutes1/**
+      serviceId: SERVICE-PROVIDER1
+    myRoutes2:
+      path: /myRoutes2/**
+      serviceId: SERVICE-PROVIDER2
+  host:
+    connect-timeout-millis: 3000
+    socket-timeout-millis: 3000

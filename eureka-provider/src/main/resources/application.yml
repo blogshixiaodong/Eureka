@@ -1,0 +1,5 @@
+spring:
+                         application:
+                           name: eurka-provider
+                           profiles:
+                             active: provider1
